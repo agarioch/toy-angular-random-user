@@ -1,0 +1,60 @@
+.header {
+  background-color: #3C4652;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+}
+.logo__icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--muted-yellow);
+  animation: spin 4s ease-in 4s infinite;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+.logo__text {
+  color: var(--muted-yellow);
+  font-family: Lato, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.gender {
+  align-items: baseline;
+  color: var(--light-yellow);
+  display: flex;
+  justify-content: space-evenly;
+}
+.gender__option {
+  border-radius: 4px;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.gender__option:hover {
+  background-color: var(--light-grey);
+  color: var(--bright-yellow);
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  80% {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+  100% {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}

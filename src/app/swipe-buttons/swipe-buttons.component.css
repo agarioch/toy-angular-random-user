@@ -1,0 +1,32 @@
+.swipe-buttons {
+  margin: auto;
+  text-align: center;
+}
+.button {
+  margin: 2rem 1rem 1rem 1rem;
+  padding: .75rem 1.75rem;
+  text-align: center;
+  background-color: var(--blue-grey);
+  border: 2px solid var(--blue-grey);
+  border-radius: .75rem;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .2s;
+}
+.button--like:hover, .button--like:focus {
+  border-color: lightpink;
+  background-color: hotpink;
+}
+.button--like:active {
+  background-color: deeppink;
+}
+.button--skip:hover, .button--skip:focus {
+  border-color: lightsteelblue;
+  background-color: cornflowerblue;
+}
+.button--skip:active {
+  background-color: dodgerblue;
+}

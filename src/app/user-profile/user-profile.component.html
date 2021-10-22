@@ -1,0 +1,8 @@
+<div class="profile" *ngIf="user">
+  <img class="profile__picture" [src]="user.picture.large" alt="">
+  <div class="profile__info">
+    <h2>{{user.name.first + ' ' + user.name.last}}</h2>
+    <p>{{user.phone}}</p>
+    <p>{{user.email}}</p>
+  </div>
+</div>
