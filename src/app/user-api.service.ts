@@ -33,6 +33,14 @@ export class UserApiService {
     this.user = user;
   } 
 
+  setGender(gender?: string) {
+    if(gender) {
+      this.url = 'https://randomuser.me/api/' + `?gender=${gender}`;
+    } else {
+      this.url = 'https://randomuser.me/api/'
+    }
+  }
+
   private handleError<T>(operation='operation', result?: T) {
     return (error: any):Observable<T> => {
       console.error(`${operation} failed:`, error.message);

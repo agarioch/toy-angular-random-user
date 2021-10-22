@@ -4,15 +4,15 @@
     <h1 class="logo__text">random match</h1>
   </div>
   <div class="gender">
-    <div class="gender__option">
+    <div [ngClass]="{'selected': gender === 'male'}" (click)="setGender('male')" class="gender__option">
       <i class="fas fa-mars"></i>
       Men
     </div>
-    <div class="gender__option">
+    <div [ngClass]="{'selected': gender === 'female'}" (click)="setGender('female')" class="gender__option">
       <i class="fas fa-venus"></i>
       Women
     </div>
-    <div class="gender__option">
+    <div [ngClass]="{'selected': !gender}" (click)="setGender()" class="gender__option">
       <i class="fas fa-venus-mars"></i>
       Both
     </div>

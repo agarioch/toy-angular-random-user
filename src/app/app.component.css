@@ -41,6 +41,10 @@
   padding: 0.5rem;
   cursor: pointer;
 }
+.gender__option.selected {
+  font-weight: 700;
+  color: var(--bright-yellow);
+}
 .gender__option:hover {
   background-color: var(--light-grey);
   color: var(--bright-yellow);

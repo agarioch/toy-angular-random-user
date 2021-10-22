@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserApiService } from './user-api.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'random-user';
+  gender: (string | undefined) = undefined;
+
+  constructor(private userApiService: UserApiService) { }
+
+  setGender(gender?:string) {
+    this.userApiService.setGender(gender);
+    this.gender = gender;
+  }
 }
