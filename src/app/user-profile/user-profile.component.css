@@ -21,3 +21,8 @@
   margin-top: 0;
   margin-bottom:0;
 }
+.profile__detail {
+  color: var(--light-grey);
+  margin-top: .2rem;
+  margin-bottom: .2rem;
+}

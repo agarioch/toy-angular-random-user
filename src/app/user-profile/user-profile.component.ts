@@ -12,20 +12,15 @@ export class UserProfileComponent implements OnInit {
     name: {first: 'Example', last:'User', title:'Ms'},
     email: 'example.email@mail.com',
     phone: '00000000000',
-    picture: {large: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png', medium: '', thumbnail:''}
+    picture: {large: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png', medium: '', thumbnail:''},
+    dob: {age: 99, date:'01-01-01'}
   };
 
   constructor(private userApiService: UserApiService) { }
 
   ngOnInit(): void {
-    this.getUser();
+    this.userApiService.getUser().subscribe(() => {
+      this.userApiService.result.subscribe(user => this.user = user);
+    })
   }
-
-  getUser():void {
-    this.userApiService.getUser().subscribe(res => {
-      console.log(res);
-      if (res) this.user =  res.results[0]
-    });
-  }
-
 }

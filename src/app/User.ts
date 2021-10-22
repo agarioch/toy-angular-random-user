@@ -8,6 +8,7 @@ export interface User {
   email: string;
   phone: string;
   picture: Picture;
+  dob: Dob
 }
 
 interface Name {
@@ -19,4 +20,8 @@ interface Picture {
   large: string;
   medium: string;
   thumbnail: string;
+}
+interface Dob {
+  age: number;
+  date: string;
 }
