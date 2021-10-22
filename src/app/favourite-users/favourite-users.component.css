@@ -1,0 +1,24 @@
+.saved-users {
+  text-align: center;
+}
+.saved-users__title {
+  font-size: 1.4rem;
+}
+.favourite-list {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 300px;
+  overflow: hidden;
+}
+.favourite-list__user {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+.favourite-list__user--picture {
+  border-radius: 50%;
+  max-width: 30px;
+  margin-right: .75rem;
+}

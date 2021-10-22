@@ -1,0 +1,10 @@
+.
+<div *ngIf="likedUsers" class="saved-users">
+  <h1 class="saved-users__title">Saved Users</h1> 
+  <ul class="favourite-list">
+    <li *ngFor="let user of likedUsers" class="favourite-list__user">
+      <img class="favourite-list__user--picture" [src]="user.picture.thumbnail" alt="User profile picture">
+      {{user.name.first}} {{user.name.last}}
+    </li>
+  </ul>
+</div>

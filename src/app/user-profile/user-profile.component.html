@@ -1,10 +1,12 @@
-<div class="profile" *ngIf="user">
-  <img class="profile__picture" [src]="user.picture.large" alt="">
-  <div class="profile__info">
-    <h2>{{user.name.first + ' ' + user.name.last}}</h2>
-    <p class="profile__detail">{{user.dob.date | date:'dd/MM/YY'}} ({{user.dob.age}} years old)</p>
-    <p class="profile__detail">{{user.phone}}</p>
-    <p class="profile__detail">{{user.email}}</p>
+<div class="bg">
+  <div class="profile" *ngIf="user">
+    <img class="profile__picture" [src]="user.picture.large" alt="">
+    <div class="profile__info">
+      <h2>{{user.name.first + ' ' + user.name.last}}</h2>
+      <p class="profile__detail">{{user.dob.date | date:'dd/MM/YY'}} ({{user.dob.age}} years old)</p>
+      <p class="profile__detail">{{user.phone}}</p>
+      <p class="profile__detail">{{user.email}}</p>
+    </div>
   </div>
 </div>
 <app-swipe-buttons></app-swipe-buttons>

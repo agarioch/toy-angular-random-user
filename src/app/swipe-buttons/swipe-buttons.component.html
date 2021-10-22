@@ -1,9 +1,5 @@
 <div class="swipe-buttons">
   <button (click)="likeUser()" class="button button--like"><i class="fas fa-heart"></i> Favourite</button>
-  <button class="button button--skip"><i class="fas fa-dice-two"></i> Re-roll</button>
+  <button (click)="reRoll()" class="button button--skip"><i class="fas fa-dice-two"></i> Re-roll</button>
 </div>
-<div *ngIf="likedUsers" class="saved-users">
-  <ul *ngFor="let user of likedUsers">
-    <li>{{user.name.first}} {{user.name.last}}</li>
-  </ul>
-</div>
+<app-favourite-users [likedUsers]="likedUsers"></app-favourite-users>

@@ -16,13 +16,13 @@ export class SwipeButtonsComponent implements OnInit {
     this.userApiService.result.subscribe(user => this.currentUser = user);
   }
 
-
   likeUser() {
-    console.log('liked')
     if (this.currentUser) {
       this.likedUsers.push(this.currentUser);
       this.userApiService.getUser().subscribe(user => this.currentUser = user.results[0]);
-      this.userApiService.updateUser(this.currentUser);
     }
+  }
+  reRoll() {
+    this.userApiService.getUser().subscribe(user => this.currentUser = user.results[0]);
   }
 }
